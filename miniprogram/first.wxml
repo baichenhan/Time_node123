@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        <view class="userinfo-avatar">
+          <open-data   type="userAvatarUrl"></open-data>
+        </view>
+        <open-data  class="userinfo-nickname" type="userNickName" ></open-data>
+        <text class="userinfo-nickname" >你好</text>
+
+        <button class="button1" >
+          <h1 class="text-in-button" >签到</h1>
+        </button>
+</view>
