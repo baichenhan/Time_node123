@@ -1,6 +1,6 @@
 {
   "pages": [
-    "first",
+    "app",
     "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
@@ -13,15 +13,39 @@
     "pages/openapi/callback/callback",
     "pages/openapi/cloudid/cloudid",
     "pages/im/im",
-    "pages/im/room/room"
+    "pages/im/room/room",
+    "pages/gaosheng/gaosheng",
+    "pages/baichenhan/baichenhan"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTitleText": "Time Node 123",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "style": "v2",
+  "tabBar": {
+    "list": [{
+        "pagePath": "app",
+        "text": "1",
+        "iconPath": "images/center.png",
+        "selectedIconPath": "images/center.png"
+      },
+      {
+        "pagePath": "pages/gaosheng/gaosheng",
+        "text": "签到任务",
+        "iconPath": "images/qiandao.png",
+        "selectedIconPath": "images/qiandao.png"
+      },
+      {
+        "pagePath": "pages/baichenhan/baichenhan",
+        "text": "持续任务",
+        "iconPath": "images/jishi.png",
+        "selectedIconPath": "images/jishi.png"
+      }
+    ]
+  }
+
 }
