@@ -4,10 +4,15 @@
         <view class="userinfo-avatar">
           <open-data   type="userAvatarUrl"></open-data>
         </view>
+
         <open-data  class="userinfo-nickname" type="userNickName" ></open-data>
         <text class="userinfo-nickname" >你好</text>
 
-        <button class="button1" >
+        
+
+        <h1 class="time-text">当前时间：{{time}}</h1>
+        <button class="button1" bindtap="button1_click" >
           <h1 class="text-in-button" >签到</h1>
         </button>
 </view>
+

@@ -1,4 +1,5 @@
 // first.js
+var util = require('./js/utils.js');
 Page({
 
   /**
@@ -9,19 +10,35 @@ Page({
 
   },
 
+
+  button1_click: function() {
+    var click_time = util.formatTime(new Date());
+    console.log("签到成功！");
+    console.log("现在时间是：" + click_time);
+    wx.showToast({
+      title: '签到成功!\r\n签到时间是：' + click_time,
+       icon: "none",
+      duration: 2000
+    })
+    this.setData({
+      click_time:click_time
+    });
+
+  },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    // wx.getUserInfo({
-    //   success: res => {
-    //     console.log(res)    //获取的用户信息还有很多，都在res中，看打印结果
-    //     this.setData({
-    //       userInfo: res.userInfo,
-    //       hasUserInfo: true
-    //     })
-    //   }
-    // })
+  onLoad: function () {
+    var that = this;
+    setInterval(function(){
+      var time = util.formatTime(new Date());
+      // 再通过setData更改Page()里面的data，动态更新页面的数据
+      that.setData({
+        time: time
+      });
+      },1000);
+      
+    
   },
 
   /**
@@ -56,7 +73,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    this.onReady();
   },
 
   /**
